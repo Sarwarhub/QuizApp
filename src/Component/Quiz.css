@@ -1,0 +1,50 @@
+.Quiz {
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    margin: 10px 0;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f4f4f4;
+}
+li:hover{
+    background-color: #ddd;
+}
+.selected{
+    background-color: #b3e5fc;
+}
+.correct{
+    background-color: #33f508;
+    
+}
+
+.button{
+    background-color: #0dbc72;
+    text-align: center;
+    border-radius: 20px;
+    width: 20%;
+    cursor: pointer;
+}
+.button-disable{
+    border-radius: 20px;
+    width: 20%;
+    cursor: not-allowed;
+}
+
+.score{
+    background-color: #55a783;
+    margin-top: 50px 0;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 20%;
+    color: #eeedf6;
+}
+.score:hover{
+    background-color: #bc9bdc;
+    color: black;
+}
