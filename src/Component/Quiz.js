@@ -17,16 +17,21 @@ export default function Quiz() {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [currentAnswer, setCurrentAnswer] = useState(null);
     const [score, setScore] = useState(0);
+    const [isAnswered, setIsAnswered] = useState(false);
     const handleClick = (option) => {
-        setCurrentAnswer(option)
-        if(option === questions[currentQuestionIndex].answer){
-            setScore(score+1);
+        if (!isAnswered) { // Check if the question is already answered
+            setCurrentAnswer(option);
+            if (option === questions[currentQuestionIndex].answer) {
+                setScore(score + 1);
+            }
+            setIsAnswered(true); // Mark the question as answered
         }
-    }
+    };
     const handleNextQuestion = () => {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
         setCurrentAnswer(null);
-    }
+        setIsAnswered(false); 
+    };
     return (
         <div className='Quiz'>
             {currentQuestionIndex < questions.length ?
